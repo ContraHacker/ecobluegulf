@@ -2,23 +2,18 @@ import { match } from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
 import { NextRequest, NextResponse } from "next/server";
 
-const locales = ['en', 'ar']
-const default_locale = 'en'
+const locales = ['en', 'ar'];
+const default_locale = 'en';
 
-function get_locale(request: NextRequest) {
+function get_locale(request: NextRequest): string {
 
   const cookie_locale = request.cookies.get("NEXT_LOCALE")?.value;
 
-  if (cookie_locale && locales.includes(cookie_locale)) {
-    return cookie_locale;
-  }
+  if (cookie_locale && locales.includes(cookie_locale)) return cookie_locale;
 
   const accept_language = request.headers.get("accept-language") ?? "";
-
-  const headers = { "accept-language": accept_language };
-  const languages = new Negotiator({ headers }).languages();
-
-  return match(languages, locales, default_locale)
+  const languages = new Negotiator({ headers: { "accept-language": accept_language } }).languages();
+  return match(languages, locales, default_locale);
 
 }
 
@@ -26,32 +21,20 @@ export function proxy(request: NextRequest) {
 
   const { pathname } = request.nextUrl;
 
-  const preferred_locale = get_locale(request);
-
-  const pathname_locale = locales.find(
+  const pathname_has_locale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
 
-  if (pathname_locale !== preferred_locale) {
+  if (pathname_has_locale) return NextResponse.next();
 
-    const new_pathname = pathname.replace(`/${pathname_locale}`, `/${preferred_locale}`);
-    request.nextUrl.pathname = new_pathname || `/${preferred_locale}`;
+  const preferred_locale = get_locale(request);
 
-    return NextResponse.redirect(request.nextUrl);
+  request.nextUrl.pathname = `/${preferred_locale}${pathname === '/' ? '' : pathname}`;
 
-  }
-
-  if (!pathname_locale) {
-    request.nextUrl.pathname = `/${preferred_locale}${pathname}`;
-    return NextResponse.redirect(request.nextUrl);
-  };
-
-  return NextResponse.next();
+  return NextResponse.redirect(request.nextUrl);
 
 }
 
 export const config = {
-  matcher: [
-    '/((?!_next).*)'
-  ]
-}
+  matcher: ['/((?!api|_next/static|_next/image|.*\\..*).*)']
+};

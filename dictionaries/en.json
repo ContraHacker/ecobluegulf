@@ -1,3 +1,21 @@
 {
-  "brand_name": "Eco Blue Gulf"
+  "brand_name": "Eco Blue Gulf",
+  "menu_links": {
+    "product": {
+      "title": "Product",
+      "desc": "Find Out More Eco Blue Gulf"
+    },
+    "know_more": {
+      "title": "Know More",
+      "desc": "Read About the Technology"
+    },
+    "about_us": {
+      "title": "About Us",
+      "desc": "About Us & Our Vision"
+    },
+    "contact_sales": {
+      "title": "Contact Sales",
+      "desc": "Get In Touch"
+    }
+  }
 }
