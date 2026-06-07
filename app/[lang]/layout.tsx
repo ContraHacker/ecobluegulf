@@ -2,6 +2,7 @@ import "@/app/globals.css";
 import Header from "@/components/Header";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { notFound } from "next/navigation";
 import { get_dictionary, Locale } from "../dictionaries";
 
 const geistSans = Geist({
@@ -22,6 +23,11 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children, params }: LayoutProps<'/[lang]'>) {
 
   const lang = (await params).lang as Locale;
+
+  if (lang !== 'en' && lang !== 'ar') {
+    return notFound();
+  }
+  
   const dict = await get_dictionary(lang);
 
   return (
