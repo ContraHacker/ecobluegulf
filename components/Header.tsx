@@ -7,6 +7,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import LanguageToggle from "./LanguageToggle";
 
 export default function Header({ dict }: { dict: Dict }) {
 
@@ -71,6 +72,8 @@ export default function Header({ dict }: { dict: Dict }) {
             { dict.brand_name }
           </span>
         </Link>
+
+        <LanguageToggle className="ml-auto text-secondary" />
 
         <button
           ref={button_ref}

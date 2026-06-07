@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Eco Blue Gulf",
+  title: "EcoBlueGulf",
   description: "Diesel Exhaust Fluid (DEF) for all Euro6 Compliant Vehicles.",
 };
 
@@ -27,7 +27,7 @@ export default async function RootLayout({ children, params }: LayoutProps<'/[la
   if (lang !== 'en' && lang !== 'ar') {
     return notFound();
   }
-  
+
   const dict = await get_dictionary(lang);
 
   return (
@@ -38,7 +38,7 @@ export default async function RootLayout({ children, params }: LayoutProps<'/[la
       <body>
         <Header dict={dict} />
         {children}
-        </body>
+      </body>
     </html>
   );
 }

@@ -1,9 +1,9 @@
 {
-  "brand_name": "Eco Blue Gulf",
+  "brand_name": "EcoBlueGulf",
   "menu_links": {
     "product": {
       "title": "Product",
-      "desc": "Find Out More Eco Blue Gulf"
+      "desc": "Find Out More EcoBlueGulf"
     },
     "know_more": {
       "title": "Know More",
@@ -16,6 +16,25 @@
     "contact_sales": {
       "title": "Contact Sales",
       "desc": "Get In Touch"
+    }
+  },
+  "landing_page": {
+    "hero": {
+      "heading": "High-Performance Diesel Exhaust Fluid (DEF)",
+      "description": "Highly Recommended for All Euro6 Compliant Diesel Trucks, Buses, Light Commercial Vehicles & Cars."
+    },
+    "features": {
+      "icon_text": [
+        "High Efficiency*",
+        "Cleaner Environment",
+        "Lower Emission**"
+      ],
+      "heading": "German Standards",
+      "sub_heading": "ISO 22241 Certified as per AdBlue Specifications",
+      "points": [
+        "* 3-5% Less Diesel Consumption.",
+        "** Low NOx Emission Guaranteed by SCR Technology, Euro6 Norms."
+      ]
     }
   }
 }
