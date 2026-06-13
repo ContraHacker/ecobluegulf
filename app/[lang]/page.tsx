@@ -219,11 +219,11 @@ export default async function Home({ params }: PageProps<'/[lang]'>) {
 
           <div className="mt-4 max-w-2xl md:text-lg flex flex-col sm:flex-row gap-4 items-center">
             <div className="bg-white px-2 py-2 rounded w-full">
-              <p className="text-gray-600 text-sm font-bold">{dict.landing_page.offering.labelled_list.buses.label}</p>        
+              <p className="text-gray-600 text-sm font-bold">{dict.landing_page.offering.labelled_list.buses.label}</p>
               <p className="text-gray-700 text-lg">{dict.landing_page.offering.labelled_list.buses.text}</p>
             </div>
             <div className="bg-white px-2 py-2 rounded w-full">
-              <p className="text-gray-600 text-sm font-bold">{dict.landing_page.offering.labelled_list.heavy_trucks.label}</p>  
+              <p className="text-gray-600 text-sm font-bold">{dict.landing_page.offering.labelled_list.heavy_trucks.label}</p>
               <p className="text-gray-700 text-lg">{dict.landing_page.offering.labelled_list.heavy_trucks.text}</p>
             </div>
             <div className="bg-white px-2 py-2 rounded w-full">
@@ -250,7 +250,7 @@ export default async function Home({ params }: PageProps<'/[lang]'>) {
 
         </div>
       </div>
-      
+
     </>
   );
 }

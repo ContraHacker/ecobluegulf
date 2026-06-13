@@ -43,7 +43,7 @@ export default function Header({ dict }: { dict: Dict }) {
     if (menu_open) {
       document.addEventListener('mousedown', handle_click_outside);
     }
-    
+
     else {
       document.removeEventListener('mousedown', handle_click_outside);
     }
@@ -69,7 +69,7 @@ export default function Header({ dict }: { dict: Dict }) {
             height={32}
           />
           <span className="text-xl font-semibold text-shadow-xs text-secondary">
-            { dict.brand_name }
+            {dict.brand_name}
           </span>
         </Link>
 

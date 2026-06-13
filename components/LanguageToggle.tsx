@@ -13,7 +13,7 @@ export default function LanguageToggle({ className }: { className?: string }) {
 
     const segments = pathname.split('/');
     const remaining_path = segments.slice(2).join('/');
-    
+
     router.push(`/${new_locale}/${remaining_path}`);
 
   };

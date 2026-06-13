@@ -19,7 +19,7 @@ export default async function Contact({ params }: PageProps<'/[lang]'>) {
     <div className="bg-white">
       <div className="py-12 lg:py-24 px-4 sm:px-12 md:px-18 max-w-6xl mx-auto font-sans">
 
-        <h3 className="text-4xl lg:text-5xl mb-6 md:mb-8 font-bold md:border-t-8 md:pt-8 border-gray-200 max-w-max mx-auto md:mx-0">{dict.contact.heading}</h3>
+        <h1 className="text-4xl lg:text-5xl mb-6 md:mb-8 font-bold md:border-t-8 md:pt-8 border-gray-200 max-w-max mx-auto md:mx-0">{dict.contact.heading}</h1>
 
         <p className="mt-8 md:text-lg font-bold">
           {dict.brand_name}
@@ -30,22 +30,22 @@ export default async function Contact({ params }: PageProps<'/[lang]'>) {
         </p>
 
         <ul className="mt-8 text-lg space-y-2">
-            <li className="hover:text-primary transition-colors">
-              <PhoneIcon className="size-6 inline mr-2" />+91 748 340 5875
-            </li>
-            <li className="hover:text-primary transition-colors">
-              <PhoneIcon className="size-6 inline mr-2" />+91 999 737 1132
-            </li>
-            <li className="hover:text-primary transition-colors">
-              <Image alt='WhatsApp' src='/whatsapp.svg' width={24} height={24} className="inline mr-2" />+91 999 737 1132
-            </li>
-            <li className="hover:text-primary transition-colors">
-              <EnvelopeIcon className="size-6 inline mr-2" />info@pristine-envo.com
-            </li>
-            <li className="hover:text-primary transition-colors">
-              <GlobeAltIcon className="size-6 inline mr-2" />https://pristine-envo.com
-            </li>
-          </ul>
+          <li className="hover:text-primary transition-colors">
+            <PhoneIcon className="size-6 inline mr-2" />+91 748 340 5875
+          </li>
+          <li className="hover:text-primary transition-colors">
+            <PhoneIcon className="size-6 inline mr-2" />+91 999 737 1132
+          </li>
+          <li className="hover:text-primary transition-colors">
+            <Image alt='WhatsApp' src='/whatsapp.svg' width={24} height={24} className="inline mr-2" />+91 999 737 1132
+          </li>
+          <li className="hover:text-primary transition-colors">
+            <EnvelopeIcon className="size-6 inline mr-2" />info@pristine-envo.com
+          </li>
+          <li className="hover:text-primary transition-colors">
+            <GlobeAltIcon className="size-6 inline mr-2" />https://pristine-envo.com
+          </li>
+        </ul>
 
       </div>
     </div>
