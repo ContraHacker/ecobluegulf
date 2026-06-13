@@ -1,4 +1,5 @@
 import "@/app/globals.css";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -35,9 +36,10 @@ export default async function RootLayout({ children, params }: LayoutProps<'/[la
       lang={lang}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body>
+      <body className="min-h-screen flex flex-col">
         <Header dict={dict} />
         {children}
+        <Footer dict={dict} />
       </body>
     </html>
   );

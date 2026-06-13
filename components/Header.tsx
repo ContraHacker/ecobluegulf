@@ -111,7 +111,7 @@ export default function Header({ dict }: { dict: Dict }) {
             </Link>
           </li>
           <li>
-            <Link href='/#about-us' className="flex gap-x-4 items-center text-primary hover:text-white pl-4 pr-16 py-4 transition-colors bg-gray-50 hover:bg-primary focus:outline-none border-2 focus:border-primary border-gray-50">
+            <Link href='/about' className="flex gap-x-4 items-center text-primary hover:text-white pl-4 pr-16 py-4 transition-colors bg-gray-50 hover:bg-primary focus:outline-none border-2 focus:border-primary border-gray-50">
               <UserIcon className="size-5 opacity-50" />
               <span>
                 <p className="font-bold">{dict.menu_links.about_us.title}</p>

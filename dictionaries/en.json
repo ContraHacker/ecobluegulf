@@ -1,5 +1,7 @@
 {
+  "dict": "en",
   "brand_name": "EcoBlueGulf",
+  "address": "Al-Jubail, Kingdom of Saudi Arabia",
   "menu_links": {
     "product": {
       "title": "Product",
@@ -35,6 +37,92 @@
         "* 3-5% Less Diesel Consumption.",
         "** Low NOx Emission Guaranteed by SCR Technology, Euro6 Norms."
       ]
+    },
+    "product": {
+      "heading": "The Product",
+      "subheading": "EcoBlueGulf is a NOx reduction additive for Euro6 compliant diesel vehicles.",
+      "desc": "Our product goes thru stringent quality checks and certifications as per German Standards & ISO 22241.Saudi Made at our state of the art facility, our Scientist & Team ensure strict compliance to quality, testing and manufacturing standards. Moreover, our team is available to serve you and address your queries on a priority basis.",
+      "ctas": [
+        "Learn More",
+        "Get In Touch"
+      ]
+    },
+    "applications": {
+      "heading": "Applications",
+      "list": [
+        "All Euro 6 Diesel Vehicles (Trucks, Buses & Cars)",
+        "All Diesel Vehicles Fitted with SCR"
+      ],
+      "sub_heading": "We cater to the automotive sector by offering NOx reduction additive for Euro6 compliant diesel vehicles.",
+      "ctas": [
+        "Learn More",
+        "Our Offerings"
+      ]
+    },
+    "benifits": {
+      "heading": "Benifits of EcoBlueGulf",
+      "sub_heading": "EcoBlueGulf helps you reduce harmful emissions from all your diesel operated vehicles.",
+      "list": [
+        "Curbs pollution by reducing toxic NOx emissions from Diesel Vehicles",
+        "Non-Toxic, Non-Polluting & Non-Hazardous",
+        "Ready Stock & Express Delivery",
+        "Improved Fuel Economy"
+      ],
+      "desc": {
+        "heading": "About the SCR Technology",
+        "text": "Selective Catalytic Reduction (SCR) is an advanced emission control technology that injects a liquid-reductant agent through a special catalyst into the exhaust stream of a diesel engine. Before being expelled through vehicle exhaust, the liquid-reductant sets off a chemical reaction that converts nitrogen oxides into nitrogen, water and tiny amounts of carbon dioxide (CO2) - The natural components of the air we breathe."
+      }
+    },
+    "offering": {
+      "heading": "Our Offerings",
+      "list": [
+        "20 Liters Plastic Jerry-Can Container",
+        "10 Liters Plastic Jerry-Can Container",
+        "200 Liters Drums",
+        "1000 Liters IBC Containers",
+        "Customized Options as per Your Requirements"
+      ],
+      "sub_heading": "The Required Quantity depends on the type of vehicle.",
+      "labelled_list": {
+        "buses": {
+          "label": "Buses",
+          "text": "52L / Month"
+        },
+        "heavy_trucks": {
+          "label": "Heavy Trucks",
+          "text": "104L / Month"
+        },
+        "passenger_cars": {
+          "label": "Passenger Cars",
+          "text": "6L / Month"
+        }
+      },
+      "ctas": [
+        "Contact Us",
+        "Place an Order"
+      ]
+    },
+    "about_us": {
+      "heading": "About Us",
+      "text": "EcoBlueGulf helps you reduce harmful emissions from all your diesel operated vehicles. We cater to the automotive sector by offering NOx reduction additive for Euro 6 Compliant Diesel Vehicles. Our Scientists & Engineers ensure compliance to quality thru stringent quality checks and certifications as per German Standards & ISO 22241. We are available to serve you and address your queries on a priority basis."
     }
+  },
+  "buy": {
+    "where_to_buy": {
+      "heading": "Where to Buy",
+      "list": [
+        "Available at all Petrol Outlets & Workshops",
+        "Express Delivery by Phone or WhatsApp"
+      ],
+      "ctas": [
+        "More Contact Options"
+      ]
+    },
+    "available_now": {
+      "heading": "Available Now"
+    }
+  },
+  "contact": {
+    "heading": "Contact Us"
   }
 }

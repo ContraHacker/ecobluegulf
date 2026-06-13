@@ -1,5 +1,6 @@
-import { AdjustmentsHorizontalIcon, CloudArrowDownIcon, GlobeEuropeAfricaIcon } from "@heroicons/react/20/solid";
+import { AdjustmentsHorizontalIcon, CheckIcon, CloudArrowDownIcon, GlobeEuropeAfricaIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { get_dictionary, has_locale } from "../dictionaries";
 
@@ -8,7 +9,7 @@ export default async function Home({ params }: PageProps<'/[lang]'>) {
   const { lang } = await params;
   if (!has_locale(lang)) notFound();
 
-  const dict = await get_dictionary(lang)
+  const dict = await get_dictionary(lang);
 
   return (
     <>
@@ -65,6 +66,191 @@ export default async function Home({ params }: PageProps<'/[lang]'>) {
         </div>
 
       </div>
+
+      <div className="bg-white" id='product'>
+        <div className="py-12 lg:py-24 px-4 sm:px-12 md:px-18 max-w-6xl mx-auto font-sans lg:grid grid-cols-[max-content_auto] gap-x-32">
+
+          <div>
+
+            <h3 className="text-4xl lg:text-5xl mb-6 md:mb-8 font-bold md:border-t-8 md:pt-8 border-gray-200 max-w-max mx-auto md:mx-0">{dict.landing_page.product.heading}</h3>
+
+            <p className="text-gray-700 text-justify max-w-2xl md:text-lg">
+              {dict.landing_page.product.subheading}
+            </p>
+
+            <p className="mt-4 text-gray-700 text-justify max-w-2xl md:text-lg">
+              {dict.landing_page.product.desc}
+            </p>
+
+            <div className="flex justify-start gap-x-4 mt-8 max-w-max mx-auto md:mx-0">
+              <Link
+                href={`/${lang}#know-more`}
+                className="w-56 block bg-gray-50 py-3 text-center rounded border border-black/25 shadow-sm hover:shadow-md text"
+              >
+                {dict.landing_page.product.ctas[0]}
+              </Link>
+
+              <Link
+                href='/contact'
+                className="w-56 block bg-primary-50 py-3 text-center rounded border border-black/25 shadow-sm hover:shadow-md text"
+              >
+                {dict.landing_page.product.ctas[1]}
+              </Link>
+            </div>
+
+          </div>
+
+          <div className="relative hidden lg:block">
+            <Image
+              src='/logo.svg'
+              alt='Pristine Envo Logo'
+              fill
+            />
+          </div>
+
+        </div>
+      </div>
+
+      <div className="bg-secondary/50">
+        <div className="py-12 lg:py-24 px-4 sm:px-12 md:px-18 max-w-6xl mx-auto font-sans">
+
+          <h3 className="text-4xl lg:text-5xl mb-6 md:mb-8 font-bold md:border-t-8 md:pt-8 border-secondary max-w-max mx-auto md:mx-0">{dict.landing_page.applications.heading}</h3>
+
+          <ul className="text-gray-800 text-lg lg:text-xl space-y-2 max-w-max mx-auto md:mx-0">
+            <li className="flex items-center gap-x-2">
+              <CheckIcon className="size-5 lg:size-8 text-green-600 shrink-0" />
+              <span>{dict.landing_page.applications.list[0]}</span>
+            </li>
+            <li className="flex items-center gap-x-2">
+              <CheckIcon className="size-5 lg:size-8 text-green-600 shrink-0" />
+              <span>{dict.landing_page.applications.list[1]}</span>
+            </li>
+          </ul>
+
+          <p className="mt-8 text-gray-700 text-justify max-w-2xl md:text-lg">
+            {dict.landing_page.applications.sub_heading}
+          </p>
+
+          <div className="flex justify-start gap-x-4 mt-8 max-w-max mx-auto md:mx-0">
+            <Link
+              href={`/${lang}#know-more`}
+              className="w-56 block bg-gray-50 py-3 text-center rounded border border-black/25 shadow-sm hover:shadow-md text"
+            >
+              {dict.landing_page.applications.ctas[0]}
+            </Link>
+
+            <Link
+              href={`/${lang}#offerings`}
+              className="w-56 block bg-secondary py-3 text-center rounded border border-black/25 shadow-sm hover:shadow-md text"
+            >
+              {dict.landing_page.applications.ctas[1]}
+            </Link>
+          </div>
+
+        </div>
+      </div>
+
+      <div className="bg-white" id='know-more'>
+        <div className="py-12 lg:py-24 px-4 sm:px-12 md:px-18 max-w-6xl mx-auto font-sans">
+
+          <h3 className="text-4xl lg:text-5xl mb-6 md:mb-8 font-bold md:border-t-8 md:pt-8 border-gray-200 max-w-max mx-auto md:mx-0">{dict.landing_page.benifits.heading}</h3>
+
+          <p className="text-gray-700 text-justify max-w-2xl md:text-lg">
+            {dict.landing_page.benifits.sub_heading}
+          </p>
+
+          <ul className="text-gray-800 text-lg lg:text-xl space-y-2 max-w-max mx-auto md:mx-0 mt-6 md:mt-8">
+            <li className="flex items-center gap-x-2">
+              <CheckIcon className="size-5 lg:size-8 text-green-600 shrink-0" />
+              <span>{dict.landing_page.benifits.list[0]}</span>
+            </li>
+            <li className="flex items-center gap-x-2">
+              <CheckIcon className="size-5 lg:size-8 text-green-600 shrink-0" />
+              <span>{dict.landing_page.benifits.list[1]}</span>
+            </li>
+            <li className="flex items-center gap-x-2">
+              <CheckIcon className="size-5 lg:size-8 text-green-600 shrink-0" />
+              <span>{dict.landing_page.benifits.list[2]}</span>
+            </li>
+            <li className="flex items-center gap-x-2">
+              <CheckIcon className="size-5 lg:size-8 text-green-600 shrink-0" />
+              <span>{dict.landing_page.benifits.list[3]}</span>
+            </li>
+          </ul>
+
+          <p className="mt-8 text-gray-700 text-justify max-w-2xl md:text-lg">
+            <b>{dict.landing_page.benifits.desc.heading}:</b>{dict.landing_page.benifits.desc.text}
+          </p>
+
+        </div>
+      </div>
+
+      <div className="bg-green-50" id='offerings'>
+        <div className="py-12 lg:py-24 px-4 sm:px-12 md:px-18 max-w-6xl mx-auto font-sans">
+
+          <h3 className="text-4xl lg:text-5xl mb-6 md:mb-8 font-bold md:border-t-8 md:pt-8 border-green-200 max-w-max mx-auto md:mx-0">{dict.landing_page.offering.heading}</h3>
+
+          <ul className="text-gray-800 text-lg lg:text-xl space-y-2 max-w-max mx-auto md:mx-0">
+            <li className="flex items-center gap-x-2">
+              <CheckIcon className="size-5 lg:size-8 text-green-600 shrink-0" />
+              <span>{dict.landing_page.offering.list[0]}</span>
+            </li>
+            <li className="flex items-center gap-x-2">
+              <CheckIcon className="size-5 lg:size-8 text-green-600 shrink-0" />
+              <span>{dict.landing_page.offering.list[1]}</span>
+            </li>
+            <li className="flex items-center gap-x-2">
+              <CheckIcon className="size-5 lg:size-8 text-green-600 shrink-0" />
+              <span>{dict.landing_page.offering.list[2]}</span>
+            </li>
+            <li className="flex items-center gap-x-2">
+              <CheckIcon className="size-5 lg:size-8 text-green-600 shrink-0" />
+              <span>{dict.landing_page.offering.list[3]}</span>
+            </li>
+            <li className="flex items-center gap-x-2">
+              <CheckIcon className="size-5 lg:size-8 text-green-600 shrink-0" />
+              <span>{dict.landing_page.offering.list[4]}.</span>
+            </li>
+          </ul>
+
+          <p className="mt-8 text-gray-700 text-justify max-w-2xl md:text-lg">
+            <b>{dict.landing_page.offering.sub_heading}</b>
+          </p>
+
+          <div className="mt-4 max-w-2xl md:text-lg flex flex-col sm:flex-row gap-4 items-center">
+            <div className="bg-white px-2 py-2 rounded w-full">
+              <p className="text-gray-600 text-sm font-bold">{dict.landing_page.offering.labelled_list.buses.label}</p>        
+              <p className="text-gray-700 text-lg">{dict.landing_page.offering.labelled_list.buses.text}</p>
+            </div>
+            <div className="bg-white px-2 py-2 rounded w-full">
+              <p className="text-gray-600 text-sm font-bold">{dict.landing_page.offering.labelled_list.heavy_trucks.label}</p>  
+              <p className="text-gray-700 text-lg">{dict.landing_page.offering.labelled_list.heavy_trucks.text}</p>
+            </div>
+            <div className="bg-white px-2 py-2 rounded w-full">
+              <p className="text-gray-600 text-sm font-bold">{dict.landing_page.offering.labelled_list.passenger_cars.label}</p>
+              <p className="text-gray-700 text-lg">{dict.landing_page.offering.labelled_list.passenger_cars.text}</p>
+            </div>
+          </div>
+
+          <div className="flex justify-start gap-x-4 mt-8 max-w-max mx-auto md:mx-0">
+            <Link
+              href='/contact'
+              className="w-56 block bg-gray-50 py-3 text-center rounded border border-black/25 shadow-sm hover:shadow-md text"
+            >
+              {dict.landing_page.offering.ctas[0]}
+            </Link>
+
+            <Link
+              href='/buy'
+              className="w-56 block bg-green-200 py-3 text-center rounded border border-black/25 shadow-sm hover:shadow-md text"
+            >
+              {dict.landing_page.offering.ctas[1]}
+            </Link>
+          </div>
+
+        </div>
+      </div>
+      
     </>
   );
 }
