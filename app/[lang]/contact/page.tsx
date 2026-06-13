@@ -40,10 +40,10 @@ export default async function Contact({ params }: PageProps<'/[lang]'>) {
             <Image alt='WhatsApp' src='/whatsapp.svg' width={24} height={24} className="inline mr-2" />+91 999 737 1132
           </li>
           <li className="hover:text-primary transition-colors">
-            <EnvelopeIcon className="size-6 inline mr-2" />info@pristine-envo.com
+            <EnvelopeIcon className="size-6 inline mr-2" />info@ecobluegulf.com
           </li>
           <li className="hover:text-primary transition-colors">
-            <GlobeAltIcon className="size-6 inline mr-2" />https://pristine-envo.com
+            <GlobeAltIcon className="size-6 inline mr-2" />https://ecobluegulf.com
           </li>
         </ul>
 

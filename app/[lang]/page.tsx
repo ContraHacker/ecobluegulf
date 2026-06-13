@@ -103,7 +103,7 @@ export default async function Home({ params }: PageProps<'/[lang]'>) {
           <div className="relative hidden lg:block">
             <Image
               src='/logo.svg'
-              alt='Pristine Envo Logo'
+              alt='EcoBlueGulf Logo'
               fill
             />
           </div>
@@ -209,7 +209,7 @@ export default async function Home({ params }: PageProps<'/[lang]'>) {
             </li>
             <li className="flex items-center gap-x-2">
               <CheckIcon className="size-5 lg:size-8 text-green-600 shrink-0" />
-              <span>{dict.landing_page.offering.list[4]}.</span>
+              <span>{dict.landing_page.offering.list[4]}</span>
             </li>
           </ul>
 

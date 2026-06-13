@@ -41,7 +41,7 @@
     "product": {
       "heading": "The Product",
       "subheading": "EcoBlueGulf is a NOx reduction additive for Euro6 compliant diesel vehicles.",
-      "desc": "Our product goes thru stringent quality checks and certifications as per German Standards & ISO 22241.Saudi Made at our state of the art facility, our Scientist & Team ensure strict compliance to quality, testing and manufacturing standards. Moreover, our team is available to serve you and address your queries on a priority basis.",
+      "desc": "Our product goes thru stringent quality checks and certifications as per German Standards & ISO 22241. Saudi Made at our state of the art facility, our Scientist & Team ensure strict compliance to quality, testing and manufacturing standards. Moreover, our team is available to serve you and address your queries on a priority basis.",
       "ctas": [
         "Learn More",
         "Get In Touch"
@@ -82,7 +82,7 @@
         "1000 Liters IBC Containers",
         "Customized Options as per Your Requirements"
       ],
-      "sub_heading": "The Required Quantity depends on the type of vehicle.",
+      "sub_heading": "The required quantity depends on the type of vehicle.",
       "labelled_list": {
         "buses": {
           "label": "Buses",

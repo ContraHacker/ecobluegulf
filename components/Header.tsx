@@ -64,7 +64,7 @@ export default function Header({ dict }: { dict: Dict }) {
         >
           <Image
             src='/logo.svg'
-            alt='Pristine Envo Logo'
+            alt='EcoBlueGulf Logo'
             width={32}
             height={32}
           />
