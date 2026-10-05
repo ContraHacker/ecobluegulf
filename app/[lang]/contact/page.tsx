@@ -31,13 +31,10 @@ export default async function Contact({ params }: PageProps<'/[lang]'>) {
 
         <ul className="mt-8 text-lg space-y-2">
           <li className="hover:text-primary transition-colors">
-            <PhoneIcon className="size-6 inline mr-2" />+91 748 340 5875
+            <PhoneIcon className="size-6 inline mr-2" />+96 65501 42514
           </li>
           <li className="hover:text-primary transition-colors">
-            <PhoneIcon className="size-6 inline mr-2" />+91 999 737 1132
-          </li>
-          <li className="hover:text-primary transition-colors">
-            <Image alt='WhatsApp' src='/whatsapp.svg' width={24} height={24} className="inline mr-2" />+91 999 737 1132
+            <Image alt='WhatsApp' src='/whatsapp.svg' width={24} height={24} className="inline mr-2" />+96 65501 42514
           </li>
           <li className="hover:text-primary transition-colors">
             <EnvelopeIcon className="size-6 inline mr-2" />info@ecobluegulf.com
