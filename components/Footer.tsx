@@ -35,10 +35,10 @@ export default function Footer({ dict }: { dict: Dict }) {
         <div>
           <ul className="space-y-2 font-sans text-lg">
             <li className="flex items-center gap-x-2">
-              <PhoneIcon className="size-6" />+96 65501 42514
+              <PhoneIcon className="size-6" />+966 5501 42514
             </li>
             <li className="flex items-center gap-x-2">
-              <Image alt='WhatsApp' src='/whatsapp.svg' width={24} height={24} />+96 65501 42514
+              <Image alt='WhatsApp' src='/whatsapp.svg' width={24} height={24} />+966 5501 42514
             </li>
             <li className="flex items-center gap-x-2">
               <EnvelopeIcon className="size-6" />info@ecobluegulf.com
